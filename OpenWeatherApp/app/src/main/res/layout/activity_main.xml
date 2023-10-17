@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/weatherbg"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etZipCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        />
+    <Button
+        android:id="@+id/btnGetWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/get_weather"
+        app:layout_constraintTop_toBottomOf="@id/etZipCode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="2dp"
+        />
+    <TextView
+        android:id="@+id/txtLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latitude"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/btnGetWeather"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/txtLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/longitude"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtLatitude"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/txtCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/txtLongitude"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCity"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTime1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                ></TextView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTemp1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature: "
+                ></TextView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imgIcon1"
+                android:gravity="center"
+                android:src="@drawable/weathericon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ></ImageView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtDescription1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                ></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTime2"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                ></TextView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTemp2"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature: "
+                ></TextView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imgIcon2"
+                android:gravity="center"
+                android:src="@drawable/weathericon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ></ImageView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtDescription2"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                ></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTime3"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                ></TextView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTemp3"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature: "
+                ></TextView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imgIcon3"
+                android:gravity="center"
+                android:src="@drawable/weathericon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ></ImageView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtDescription3"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                ></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTime4"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: "
+                ></TextView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtTemp4"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature: "
+                ></TextView>
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/imgIcon4"
+                android:gravity="center"
+                android:src="@drawable/weathericon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                ></ImageView>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:id="@+id/txtDescription4"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                ></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
